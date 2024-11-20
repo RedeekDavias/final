@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Unrial</title>
+<link href="jquery/jquery-ui.css" rel="stylesheet">
+<link href="estilos.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	 <header>
+	<script type="text/javascript" src="slider/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="slider/js/jssor.slider.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function ($) {
+
+            var jssor_1_options = {
+              $AutoPlay: 1,
+              $Idle: 0,
+              $SlideDuration: 5000,
+              $SlideEasing: $Jease$.$Linear,
+              $PauseOnHover: 4,
+              $SlideWidth: 140,
+              $Align: 0
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*#region responsive code begin*/
+
+            var MAX_WIDTH = 980;
+
+            function ScaleSlider() {
+                var containerElement = jssor_1_slider.$Elmt.parentNode;
+                var containerWidth = containerElement.clientWidth;
+
+                if (containerWidth) {
+
+                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                    jssor_1_slider.$ScaleWidth(expectedWidth);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+
+            ScaleSlider();
+
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            /*#endregion responsive code end*/
+        });
+    </script>
+    <style>
+        /* jssor slider loading skin spin css */
+        .jssorl-009-spin img {
+            animation-name: jssorl-009-spin;
+            animation-duration: 1.6s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes jssorl-009-spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+    <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:100px;overflow:hidden;visibility:hidden;">
+        <!-- Loading Screen -->
+        <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+            <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="../svg/loading/static-svg/spin.svg" />
+        </div>
+        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:100px;overflow:hidden;">
+            <div>
+                <img data-u="image" src="img/logo.png" />
+            </div>
+            <div>
+                <img data-u="image" src="img/logo (1).png" />
+            </div>
+            <div>
+                <img data-u="image" src="img/logo (2).png" />
+            </div>
+            <div>
+                <img data-u="image" src="img/logo (3).png" />
+            </div>
+            <div>
+                <img data-u="image" src="img/logo (4).png" />
+            </div>
+            <div>
+                <img data-u="image" src="img/logo.png" />
+            </div>
+            <div>
+                <img data-u="image" src="img/logo (1).png" />
+            </div>
+            <div>
+                <img data-u="image" src="img/logo (2).png" />
+            </div>
+            <div>
+                <img data-u="image" src="img/logo (3).png" />
+            </div>
+            <div>
+                <img data-u="image" src="img/logo (4).png" />
+            </div>
+            <div>
+                <img data-u="image" src="img/logo.png" />
+            </div>
+      
+                </div>
+            </div>
+    
+    <!-- #endregion Jssor Slider End -->
+  <nav>
+	<ul>
+		<li><a href="index.html">inicio</a></li>
+		<li><a href="careteristicas.html">careteristicas</a></li>
+		<li><a href="cronograma.html">cronograma</a></li>
+		<li><a href="inscriocion.html">inscricion</a></li>
+	</ul>
+  </nav>
+ </header>
+<section>
+  <div id="centro">
+<div id="accordion">
+	<h3>animación</h3>
+	<div class="papel"><p>Con el entorno de tiempo real de UE5, puedes hacer cambios sobre la marcha y ver los resultados de inmediato: funciones como la iluminación global dinámica de Lumen y el trazado de rayos en tiempo real se traducen en resultados impresionantes que no te harán esperar. Y cuando quieras pasar a los píxeles finales, puede usar Movie Render Queue para conservar una calidad soberbia en segundos por fotograma.</p><figcaption><img src="img/animacion.jpg" width="450" height="275" alt=""/></figcaption></div>
+	<h3>Arquitectura</h3>
+	<div class="papel"><p>Importa escenas completas (animaciones y metadatos incluidos) de muchos paquetes CAD y BIM populares y actualízalos sobre la marcha con el vínculo directo de Datasmith. Automatiza tus tareas de limpieza y optimización de datos con las herramientas de Dataprep. Retoca UV y modela directamente en UE5 si no tienes acceso al paquete de origen. Y participa en revisiones de diseño colaborativo con una plantilla diseñada específicamente para arquitectura.</p>
+      <video width="400" height="250" id="video" preload="auto" controls="controls" autoplay="autoplay" loop="loop" >
+        <source src="ue-architecture-demo.mp4" type="video/mp4">
+      </video>
+	</div>
+	<h3>videosjuegos</h3>
+	<div class="papel"><p>UE5 proporciona las herramientas necesarias para crear mundos vastos y verdaderamente inmersivos. Con la iluminación global dinámica de Lumen, la iluminación indirecta reacciona a los cambios producidos en la iluminación directa sobre la marcha. Renderiza grandes detalles geométricos con Nanite y mapas de sombras virtuales. Gestiona y transmite tus niveles fácilmente con World Partition. También podrás colaborar con miembros de tu equipo en la misma región del mismo mundo con One File Per Actor.</p><figcaption><img src="img/juegos.jpg" width="450" height="275" alt=""/></figcaption></div>
+	<h3>simulación</h3>
+	<div class="papel"><p>Si el realismo es esencial para el éxito de tu proyecto, no busques más, porque UE5 tiene todo lo que precisas: con funciones como el trazado de rayos en tiempo real y la iluminación global dinámica, las aplicaciones interactivas son más convincentes que nunca. Además, con los sistemas de partículas y físicas integrados, puedes crear efectos y simulaciones en tiempo real con calidad cinematográfica para recrear fuego, humo, agua, tela, destrucción, vehículos y todo lo que se te pase por la cabeza.</p><figcaption><img src="img/simulador.jpg" width="450" height="275" alt=""/></figcaption></div>
+</div>
+
+
+  </div><!--cieera centro-->
+	
+</section>
+		<dvi id="social">
+			<ul>
+				<li><a href="https://x.com/" target="_blank"><img src="img/x.png" width="35" height="35" alt=""></a></li>
+		        <li><a href="https://www.instagram.com/" target="_blank"><img src="img/i.png" width="35" height="35" alt=""/></a></li>
+		        <li><a href="https://www.facebook.com" target="_blank"><img src="img/f.png" width="35" height="35" alt=""/></a></li>
+			</ul>
+		
+		</dvi>
+<div id="pie">rafael david caselli</div>
+<script src="jquery/external/jquery/jquery.js"></script>
+<script src="jquery/jquery-ui.js"></script>
+<script>$( "#accordion" ).accordion();</script>
+</body>
+</html>
